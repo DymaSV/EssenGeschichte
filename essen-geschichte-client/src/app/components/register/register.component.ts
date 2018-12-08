@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { from } from 'rxjs';
 import { FormBuilder } from '@angular/forms';
-import { AuthServiceService } from '../auth-service.service';
+import { AuthServiceService } from '../../services/auth-service.service';
 
 @Component({
   selector: 'app-register',

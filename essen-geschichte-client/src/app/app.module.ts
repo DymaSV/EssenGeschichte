@@ -9,13 +9,13 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StartPageComponent } from './start-page/start-page.component';
+import { StartPageComponent } from './components/start-page/start-page.component';
 import { from } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { UserComponent } from './user/user.component';
-import { AuthServiceService } from './auth-service.service';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { UserComponent } from './components/user/user.component';
+import { AuthServiceService } from './services/auth-service.service';
 
 @NgModule({
   declarations: [
