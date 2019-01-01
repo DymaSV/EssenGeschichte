@@ -1,28 +1,26 @@
 <form [formGroup]="loginForm">
   <div class="form-group">
-      <mat-form-field>
-          <input matInput placeholder="Email" type="email" formControlName="email" class="form-control" required>
-      </mat-form-field>
-  </div>
-  <div class="form-group">
-      <mat-form-field>
-          <input matInput placeholder="Password"  type="password"
-          class="form-control"
-          formControlName="password"
-          required>
-      </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Email" type="email" formControlName="email" class="form-control" required>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Password"  type="password"
+        class="form-control"
+        formControlName="password"
+        required>
+    </mat-form-field>
+    
     <label class="error">{{ errorMessage }}</label>
     <label class="success">{{ successMessage }}</label>
   </div>
-  <button
+
+  <button 
+    mat-raised-button
+    color="accent"
     type="submit"
-    color="primary"
     (click)="tryLogin(loginForm.value)"
-    class="btn btn-defaults"
   >
-    Log In
+  Log In
   </button>
-  <button type="submit" (click)="tryLogout()" class="btn btn-defaults">
-    Logout
-  </button>
+
 </form>

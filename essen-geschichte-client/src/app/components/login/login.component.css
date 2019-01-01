@@ -1,0 +1,15 @@
+mat-form-field{
+    width: 100%;
+}
+.form-group{
+    border-radius: 15px;
+    padding: 10px 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+button{
+    margin-top: 10px;
+}

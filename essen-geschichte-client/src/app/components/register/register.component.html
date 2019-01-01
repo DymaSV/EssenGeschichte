@@ -1,26 +1,47 @@
 <form [formGroup]="registerForm">
   <div class="form-group">
     <mat-form-field>
-        <input matInput placeholder="Email" type="email" formControlName="email" class="form-control" required>
+      <input
+        matInput
+        placeholder="Email"
+        type="email"
+        formControlName="email"
+        class="form-control"
+        required
+      />
     </mat-form-field>
     <mat-form-field>
-        <input matInput placeholder="Password"  type="password"
+      <input
+        matInput
+        placeholder="Password"
+        type="password"
         class="form-control"
         formControlName="password"
-        required>
+        required
+      />
     </mat-form-field>
-    
+    <mat-form-field> <input matInput placeholder="Name"  formControlName="name" /> </mat-form-field>
+    <mat-form-field> <input matInput placeholder="Surname"  formControlName="surname" /> </mat-form-field>
+    <mat-form-field> <input matInput placeholder="Age"  formControlName="age" /> </mat-form-field>
+    <mat-form-field> <input matInput placeholder="Hobbies"  formControlName="hobbies" /> </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Fun Status" formControlName="status">
+        <mat-option *ngFor="let status of fun_status" value="status[0]"
+          ><img [src]='status[1]'/>
+          <span class="status">{{ status[0] }}</span></mat-option
+        >
+      </mat-select>
+    </mat-form-field>
     <label class="error">{{ errorMessage }}</label>
     <label class="success">{{ successMessage }}</label>
   </div>
 
-  <button 
-    mat-button
-    color="primary"
+  <button
+    mat-raised-button
+    color="accent"
     type="submit"
     (click)="tryRegister(registerForm.value)"
   >
-    Register
+    Sign up
   </button>
-
 </form>

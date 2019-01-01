@@ -7,7 +7,17 @@ import { AngularFireDatabase } from 'angularfire2/database';
   styleUrls: ['./start-page.component.css']
 })
 export class StartPageComponent implements OnInit {
+  start_button = 'Sign Up' || 'Sign In';
 
-    ngOnInit() {
+  log_in = true;
+  ngOnInit() {}
+
+  toggleButton() {
+    this.start_button = this.log_in ? 'Sign Up' : 'Sign In';
+  }
+
+  toggleLogIn_LogUp() {
+    this.log_in = !this.log_in;
+    this.toggleButton();
   }
 }

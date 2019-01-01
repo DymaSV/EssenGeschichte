@@ -15,9 +15,20 @@ export class RegisterComponent implements OnInit {
   ) {}
   errorMessage = '';
   successMessage = '';
+  fun_status = [
+    ['Single', '../../../assets/img/single.png'],
+    ['I am a wife', '../../../assets/img/wife.png'],
+    ['I am a strongman', '../../../assets/img/strongman.png'],
+    ['I am husband', '../../../assets/img/husband.png']
+  ];
   registerForm = this.fb.group({
     email: [''],
-    password: ['']
+    password: [''],
+    name: [''],
+    surname: [''],
+    age: [''],
+    hobbies: [''],
+    status: ['']
   });
   ngOnInit() {}
   tryRegister(value) {
